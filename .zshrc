@@ -89,7 +89,7 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export ZSH="~/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="simple"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 

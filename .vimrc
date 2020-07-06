@@ -42,6 +42,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
+Plugin 'vim-syntastic/syntastic'
 map <Leader>t :CtrlPBuffer<CR>
  let g:ctrlp_map = '<C-p>'
  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
@@ -70,7 +71,7 @@ set autoindent
 set backspace=indent,eol,start
 set cindent " set smartindent
 set cmdheight=2
-set cursorline
+" set cursorline
 set errorformat=\"../../%f\"\\,%*[^0-9]%l:\ %m
 set expandtab
 set hidden
@@ -95,7 +96,7 @@ set virtualedit=block
 set wrap
 "set nu
 "set spell spelllang=en_us
-set colorcolumn=80
+"set colorcolumn=80
 set foldmethod=syntax
 set updatetime=500
 set paste
@@ -158,4 +159,15 @@ inoremap <Up> <C-o>gk
 
 map <F5> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = ['perl']
 
