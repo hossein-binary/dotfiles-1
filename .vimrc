@@ -100,7 +100,6 @@ set wrap
 "set colorcolumn=80
 set foldmethod=syntax
 set updatetime=500
-set paste
 set smartcase
 syntax on
 
