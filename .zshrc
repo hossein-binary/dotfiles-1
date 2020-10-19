@@ -87,6 +87,7 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gitgraph='git log --graph --decorate --pretty=tformat:"%C(yellow)%h%Creset %<(80,trunc)%s %Cred%<(50,trunc)%d%Creset %Cblueby %aN%Creset"'
 
 export ZSH="~/.oh-my-zsh"
 ZSH_THEME="simple"
