@@ -44,6 +44,8 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'chaoren/vim-wordmotion'
+" Comment stuff out. Use gcc
+Plugin 'tpope/vim-commentary'
 map <Leader>t :CtrlPBuffer<CR>
  let g:ctrlp_map = '<C-p>'
  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
@@ -101,6 +103,7 @@ set wrap
 set foldmethod=syntax
 set updatetime=500
 set smartcase
+set number
 syntax on
 
 colorscheme desert
@@ -172,3 +175,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl']
 
+" Snippets
+au filetype perl :iabbrev perldef use v5.26;<CR>use strict;<CR><CR>use Data::Dumper;<CR>use Data::Printer;<CR>

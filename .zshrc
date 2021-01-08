@@ -89,6 +89,8 @@
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gitgraph='git log --graph --decorate --pretty=tformat:"%C(yellow)%h%Creset %<(80,trunc)%s %Cred%<(50,trunc)%d%Creset %Cblueby %aN%Creset"'
 alias gitstat='git log --pretty=format:"[%h] %ae, %ar: %s" --stat'
+alias ctagpl="ctags -f tags --recurse --totals --exclude=blib --exclude=.svn --exclude=.git --exclude='*~' --extra=q --languages=Perl --langmap=Perl:+.t"
+alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
 export ZSH="~/.oh-my-zsh"
 ZSH_THEME="simple"
