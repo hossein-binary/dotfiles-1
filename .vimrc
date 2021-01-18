@@ -46,7 +46,9 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'chaoren/vim-wordmotion'
 " Comment stuff out. Use gcc
 Plugin 'tpope/vim-commentary'
-map <Leader>t :CtrlPBuffer<CR>
+
+map <Leader>p :CtrlPBuffer<CR>
+map <Leader>t :CtrlPBufTag<CR>
  let g:ctrlp_map = '<C-p>'
  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
  let g:ctrlp_use_caching = 1
@@ -175,5 +177,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl']
 
-" Snippets
-au filetype perl :iabbrev perldef use v5.26;<CR>use strict;<CR><CR>use Data::Dumper;<CR>use Data::Printer;<CR>
+au filetype perl :iabbrev pdef use v5.26;<CR>use strict;<CR><CR>use Data::Dumper;<CR>use Data::Printer;<CR>
+au filetype perl :iabbrev pfuture use Future;<CR>use Future::AsyncAwait;<CR>
+au filetype perl :iabbrev ploop use IO::Async::Loop;<CR><CR>my $loop = IO::Async::Loop->new;<CR>
+au filetype perl :iabbrev plog require Log::Any::Adapter;<CR>Log::Any::Adapter->import(qw(Stderr), log_level => 'info');
+au filetype perl :iabbrev pdump use Data::Dumper::Concise;<CR>use Data::Printer;<CR>
+au filetype perl :iabbrev pp print STDERR
