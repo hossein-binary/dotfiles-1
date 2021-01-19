@@ -46,9 +46,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'chaoren/vim-wordmotion'
 " Comment stuff out. Use gcc
 Plugin 'tpope/vim-commentary'
-
-map <Leader>p :CtrlPBuffer<CR>
-map <Leader>t :CtrlPBufTag<CR>
  let g:ctrlp_map = '<C-p>'
  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
  let g:ctrlp_use_caching = 1
@@ -163,7 +160,14 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 map <F5> :NERDTreeToggle<CR>
+au filetype perl :NERDTreeFind | wincmd p
 nmap <F8> :TagbarToggle<CR>
+au filetype perl :TagbarToggle
+
+map <Leader>e :NERDTreeFind<CR>
+map <Leader>b :CtrlPBuffer<CR>
+map <Leader>t :CtrlPBufTag<CR>
+map <Leader>p :Files<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
