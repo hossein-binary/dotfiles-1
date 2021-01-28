@@ -92,8 +92,8 @@ alias gitstat='git log --pretty=format:"[%h] %ae, %ar: %s" --stat'
 alias ctagpl="ctags -f tags --recurse --totals --exclude=blib --exclude=.svn --exclude=.git --exclude='*~' --extra=q --languages=Perl --langmap=Perl:+.t"
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
-export ZSH="~/.oh-my-zsh"
-ZSH_THEME="simple"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
