@@ -113,3 +113,9 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
 export PATH="$PATH:$HOME/.local/bin"
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="/home/arash/.gems"
+export GEM_PATH="/home/arash/.gems"
+export PATH="$HOME/.gems/bin
+
