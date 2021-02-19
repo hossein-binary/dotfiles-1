@@ -105,7 +105,7 @@ set smartcase
 set number
 syntax on
 
-colorscheme desert
+colorscheme delek
 
 highlight   CursorColumn  term=NONE    cterm=none ctermbg=232
 highlight   CursorLine    term=NONE    cterm=bold ctermbg=8
