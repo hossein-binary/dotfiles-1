@@ -92,8 +92,8 @@ alias gitstat='git log --pretty=format:"[%h] %ae, %ar: %s" --stat'
 alias ctagpl="ctags -f tags --recurse --totals --exclude=blib --exclude=.svn --exclude=.git --exclude='*~' --extra=q --languages=Perl --langmap=Perl:+.t"
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
-export ZSH="~/.oh-my-zsh"
-ZSH_THEME="simple"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -112,4 +112,13 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
+export PATH="$PATH:$HOME/.local/bin"
+
+# Install Ruby Gems to ~/.gems
+export GEM_HOME="$HOME/.gems"
+export GEM_PATH="$HOME/.gems"
+export PATH="$PATH:$HOME/.gems/bin"
+
+# Functions
 def() { w3m "https://www.vocabulary.com/dictionary/$1" | tail -n +13 | less }
+
