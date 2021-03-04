@@ -181,7 +181,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl']
 
-au filetype perl :iabbrev pdef use v5.26;<CR>use strict;<CR><CR>use Data::Dumper;<CR>use Data::Printer;<CR>
+au filetype perl :iabbrev pdef use v5.26;<CR>use warnings;<CR><CR>use Data::Dumper;<CR>use Data::Printer;<CR>
 au filetype perl :iabbrev pfuture use Future;<CR>use Future::AsyncAwait;<CR>
 au filetype perl :iabbrev ploop use IO::Async::Loop;<CR><CR>my $loop = IO::Async::Loop->new;<CR>
 au filetype perl :iabbrev plog require Log::Any::Adapter;<CR>Log::Any::Adapter->import(qw(Stderr), log_level => 'info');
