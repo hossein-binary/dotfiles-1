@@ -160,9 +160,9 @@ inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
 map <F5> :NERDTreeToggle<CR>
-au filetype perl :NERDTreeFind | wincmd p
+"au filetype perl :NERDTreeFind | wincmd p
 nmap <F8> :TagbarToggle<CR>
-au filetype perl :TagbarToggle
+"au filetype perl :TagbarToggle
 
 map <Leader>e :NERDTreeFind<CR>
 map <Leader>b :CtrlPBuffer<CR>
