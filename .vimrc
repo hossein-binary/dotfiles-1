@@ -53,7 +53,8 @@ Plugin 'tpope/vim-commentary'
  \ 'dir':  '\v\c\.(git|svn)$|cgi/t/sandbox|cover_db',
  \ 'file': '\v\c\.(swf|bak|png|gif|js|mov|ico|jpg|pdf|jrxml)$'
   \ }
-
+" OneHalf theme
+Plugin 'sonph/onehalf', { 'rtp': 'vim' }
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,7 +74,7 @@ set autoindent
 set backspace=indent,eol,start
 set cindent " set smartindent
 set cmdheight=2
-" set cursorline
+set cursorline
 set errorformat=\"../../%f\"\\,%*[^0-9]%l:\ %m
 set expandtab
 set hidden
@@ -105,7 +106,7 @@ set smartcase
 set number
 syntax on
 
-colorscheme delek
+colorscheme onehalfdark
 
 highlight   CursorColumn  term=NONE    cterm=none ctermbg=232
 highlight   CursorLine    term=NONE    cterm=bold ctermbg=8
